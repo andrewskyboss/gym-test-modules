@@ -165,9 +165,10 @@ Common types of users are:
 ### Design Choices
 - This project was created based on the target audience needs and requirements. The target audience is a quite wide range of active people who likes sport and want to be in a good shape.
 Based on the website theme, were chosen Reddish (International Orange), orange (yellow orange) and three shades of green (Dark state, Midnight Green and Rich black) colors as a main brand colors. 
-According to [Color Meanings website] ( https://www.color-meanings.com/color-psychology-in-sports/) and Shirley J. Wenrich, author of the book All the Colors of Life: From the History and Mystery of Color, red is the best color for sports as it represents energy and vitality. It’s using as a small accent colors. It’s very handy in gym area. It subconsciously push and supports users to work with the heavy weights.
+According to [Color Meanings website]( https://www.color-meanings.com/color-psychology-in-sports/) and Shirley J. Wenrich, author of the book All the Colors of Life: From the History and Mystery of Color, red is the best color for sports as it represents energy and vitality. It’s using as a small accent colors. It’s very handy in gym area. It subconsciously push and supports users to work with the heavy weights.
 Orange is inexorably linked to radiant energy. In sports, orange is a great color as it symbolizes strength and endurance. Orange is associated with warmth and the earth. Sports teams and the youth heartily accept this trendy color that combines strength and wisdom. Our orange color is closer to Yellow color. Yellow is the radiant and energetic color of sunshine and warmth. There is no individual who would not feel cheered and comforted when surrounded by vibrant yellow.
-For centuries, green is associated with wealth and health. It also stands for life and the environment. In sports, green represents the will to win and be cheerful. Our green is closer to Blue color. Blue is a calming color in sports. It represents a team or individual that is honest, calm, truthful, and sincere.
+
+- For centuries, green is associated with wealth and health. It also stands for life and the environment. In sports, green represents the will to win and be cheerful. Our green is closer to Blue color. Blue is a calming color in sports. It represents a team or individual that is honest, calm, truthful, and sincere.
 All those characteristics are doing unusual but very good combination for the Gym and Fitness Club theme.
 Website design is quite dark, but it gives some uniqueness and exclusive club’s atmosphere. People like to get some exclusivity feeling. Gym area is quite individual sport and dark colors does not distract attention from the sport and allows user to concentrate on their tasks.
 Differently from the gym sections and information, shopping area’s background color is white and gives user possibility to simple use and read lot of information about shopping products.
@@ -179,15 +180,15 @@ According to user requirements, website should stay useful, usable and valuable 
 
 - **Scope plane** - represents features we want to include into design. 
   - This project includes following features: 
-      - Header / Mobile navigation.
-      - Registration system.
-      - Login functionality.
-      - Create, Read, Update and Delete functionality.
-      - Intuitive design.
-      - SVG logo on top of the page.
-      - Grid/Card images as a visual representative.
-      - Search functionality.
-      - Social media icons.
+    - Header / Mobile navigation.
+    - Registration system.
+    - Login functionality.
+    - Create, Read, Update and Delete functionality.
+    - Intuitive design.
+    - SVG logo on top of the page.
+    - Grid/Card images as a visual representative.
+    - Search functionality.
+    - Social media icons.
 
 - **Structure plane** - this project’s information is structured and logically placed into the navigation. As well, this project's content is taken from the database. The structure of Database tables is presented in the [database schemas](DATABASE.md).
 
@@ -209,7 +210,7 @@ The color palette were created using information from resources about The Psycho
 - The color brand five is a Dark Jungle Green color. It is dark color and used for main content font on white backgrounds and all dark design elements to make them visible to user. This color is used for the footer background as a finishing page gradient color.
 
 - Color palete was created using [Coolors resources](https://coolors.co)
-- ![color scheme](assets/images/colors-new.png)
+- ![color scheme](assets/images/colors.PNG)
 
 
 #### Typography
@@ -240,7 +241,7 @@ The color palette were created using information from resources about The Psycho
 - As well a lot of images were using for shopping pages.
 - Font Awesome icons were used to visually represent all major social media resources and as additional information on buttons. 
 - [Images and logo were taken from the Megapixl resources](https://www.megapixl.com)
-- [Shopping page images were taken from the Boutique Ado and Kaggle website] (https://www.kaggle.com/datasets)
+- [Shopping page images were taken from the Boutique Ado and Kaggle website](https://www.kaggle.com/datasets)
 - [Nutrition images were taken from the HPnutrition website](https://www.hpnutrition.ie/)
 
 #### Design Elements
@@ -381,47 +382,48 @@ This project was developed using open source Heroku cloud Platform. All necessar
 ### To deploy this project, the following steps were taken:
 
 #### Create Heroku new app:
-    - Log in or sign up to Heroku and create a new app.
-    - Choose location and app name.
-    - In resources tab search for postgres library and add to your app.
-    - Go to the Settings tab and under Config Vars choose Reveal Config Vars, then enter the following config vars:
-      KEY VALUE
-      AWS_ACCESS_KEY_ID <aws access key>
-      AWS_SECRET_ACCESS_KEY <aws secret access key>
-      DATABASE_URL  <postgres database url>
-      EMAIL_HOST_PASS <email password(generated by Gmail)>
-      EMAIL_HOST_USER <email address>
-      SECRET_KEY  <your secret key>
-      STRIPE_PUBLIC_KEY <your stripe public key>
-      STRIPE_SECRET_KEY <your stripe secret key>
-      STRIPE_WH_SECRET  <your stripe wh key>
-      USE_AWS True
+  - Log in or sign up to Heroku and create a new app.
+  - Choose location and app name.
+  - In resources tab search for postgres library and add to your app.
+  - Go to the Settings tab and under Config Vars choose Reveal Config Vars, then enter the following config vars:
+      
+        KEY VALUE
+        AWS_ACCESS_KEY_ID <aws access key>
+        AWS_SECRET_ACCESS_KEY <aws secret access key>
+        DATABASE_URL  <postgres database url>
+        EMAIL_HOST_PASS <email password(generated by Gmail)>
+        EMAIL_HOST_USER <email address>
+        SECRET_KEY  <your secret key>
+        STRIPE_PUBLIC_KEY <your stripe public key>
+        STRIPE_SECRET_KEY <your stripe secret key>
+        STRIPE_WH_SECRET  <your stripe wh key>
+        USE_AWS True
 
 #### Set up Database:
 
-    - Copy the DATABASE_URL (Postgres URL) from the config variables of Heroku and paste it into the default database in settings.py.
-    - DATABASES = { 'default': dj_database_url.parse("<DATABASE_URL>") }
-    - Migrate the models to create the database
-    - Load the data fixtures for all databases: (loading order is mater)
-    - python3 manage.py loaddata name of database (load all existing databases)
-    - Create a superuser
-    - Remove the DATABASE_URL from settings.py
+  - Copy the DATABASE_URL (Postgres URL) from the config variables of Heroku and paste it into the default database in settings.py.
+  - DATABASES = { 'default': dj_database_url.parse("<DATABASE_URL>") }
+  - Migrate the models to create the database
+  - Load the data fixtures for all databases: (loading order is mater)
+  - python3 manage.py loaddata name of database (load all existing databases)
+  - Create a superuser
+  - Remove the DATABASE_URL from settings.py
 
 #### Upload static & media Files to AWS:
-    - Create AWS S3 Bucket.
-    - Set up a group
-    - Set a policy and user in the IAM environment.
-    - All details on AWS S3 parameters and a explanation you can find out more [here.](https://aws.amazon.com/s3/)
-    - upload static files to static folder
-    - upload media files to media folder
+  - Create AWS S3 Bucket.
+  - Set up a group
+  - Set a policy and user in the IAM environment.
+  - All details on AWS S3 parameters and a explanation you can find out more [here.](https://aws.amazon.com/s3/)
+  - upload static files to static folder
+  - upload media files to media folder
 
 #### Finish deploying on Heroku:
 
-    - Select deploy tab and under deployment method choose GitHub
-    - In connect to GitHub, search for a repository to connect - enter your GitHub repository name. When you see your repository, click connect.
-    - In Automatic deploys section, enable automatic deploy functionality.
-    - In Manual deploy section press Deploy Branch button to deploy your project.
-    - Enjoy
+  - Select deploy tab and under deployment method choose GitHub
+  - In connect to GitHub, search for a repository to connect - enter your GitHub repository name. When you see your repository, click connect.
+  - In Automatic deploys section, enable automatic deploy functionality.
+  - In Manual deploy section press Deploy Branch button to deploy your project.
+  - Enjoy
 
 ## Credits
 

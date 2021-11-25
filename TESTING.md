@@ -226,22 +226,23 @@ The website is used a small amount of direct Javascript coding
 
 Testing was done for the following devices:
 
-| TOOL / Device  |  BROWSER |  OS |  SCREEN WIDTH |
-|---|---|---|---|
-| Desktop  | Edge  | windows 10  |  1920 x 1080 |
-| Desktop  | Chrome | windows 10  |  1920 x 1080 |
-|  Desktop | Opera  |  windows 10 | 1920 x 1080  |
-|  Desktop | Firefox  |  windows 10 | 1920 x 1080  |
-| Desktop  | IE  | windows 10  |  1920 x 1080 |
-| Laptop  | Edge | windows 10  |  1366 x 768 |
-| Laptop | Chrome  |  windows 10 | 1366 x 768  |
-| Laptop  | Opera  | windows 10  |  1366 x 768 |
-| Laptop  | Firefox  | windows 10  |  1366 x 768 |
-| Laptop  | IE | windows 10  |  1366 x 768 |
-|  MP Samsung S10+ | Chrome  |  android | 1440 x 3040  |
-|  MP Samsung S10+ | Samsung  |  android | 1440 x 3040  |
-|  ipad | Chrome  |  iOs | 1024 x 768  |
-|  ipad | Safari  |  iOs | 1024 x 768  |
+
+    |TOOL / Device    | BROWSER  |  OS         |  SCREEN WIDTH |
+    |                 |          |             |               |
+    | Desktop         | Edge     | windows 10  | 1920 x 1080   |
+    | Desktop         | Chrome   | windows 10  | 1920 x 1080   |
+    | Desktop         | Opera    | windows 10  | 1920 x 1080   |
+    | Desktop         | Firefox  | windows 10  | 1920 x 1080   |
+    | Desktop         | IE       | windows 10  | 1920 x 1080   |
+    | Laptop          | Edge     | windows 10  | 1366 x 768    |
+    | Laptop          | Chrome   | windows 10  | 1366 x 768    |
+    | Laptop          | Opera    | windows 10  | 1366 x 768    |
+    | Laptop          | Firefox  | windows 10  | 1366 x 768    |
+    | Laptop          | IE       | windows 10  | 1366 x 768    |
+    | MP Samsung S20+ | Chrome   | android     | 1440 x 3040   |
+    | MP Samsung S20+ | Samsung  | android     | 1440 x 3040   |
+    | ipad            | Chrome   | iOs         | 1024 x 768    |
+    | ipad            | Safari   | iOs         | 1024 x 768    |
 
 
 ## Responsiveness
