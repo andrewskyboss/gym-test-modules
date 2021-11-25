@@ -431,7 +431,7 @@ This project was developed using open source Heroku cloud Platform. All necessar
 
 - [GO GYM Limerick](https://gogymlimerick.ie/) Go Gym Sport Club Limerick 
 - [HPnutrition](https://www.hpnutrition.ie/)  Ireland’s largest online sports supplements store
-- [Boutique Ado and Kaggle website] (https://www.kaggle.com/datasets) images and shopping products
+- [Boutique Ado and Kaggle website](https://www.kaggle.com/datasets) images and shopping products
 
 ### Media
 
