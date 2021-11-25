@@ -9,6 +9,50 @@
 # Author
 Andrej Cybovskij
 
+## Table Of Contents
+- [milestone-project-04](#milestone-project-04)
+- [Full Stack Frameworks with Django / The CUBE | GYM & Fitness Club](#full-stack-frameworks-with-django--the-cube--gym--fitness-club)
+- [Author](#author)
+  - [Table Of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [UX](#ux)
+    - [Project Goals](#project-goals)
+      - [The goals of this project are:](#the-goals-of-this-project-are)
+      - [User Goals](#user-goals)
+      - [Developer Goals](#developer-goals)
+    - [User Stories](#user-stories)
+    - [Design Choices](#design-choices)
+      - [Colors](#colors)
+      - [Typography](#typography)
+      - [Images](#images)
+      - [Design Elements](#design-elements)
+      - [Animations and Transitions](#animations-and-transitions)
+    - [Wireframes](#wireframes)
+    - [Features](#features)
+    - [Database Planning](#database-planning)
+      - [Implemented Features](#implemented-features)
+      - [Future Features](#future-features)
+  - [Technologies Used](#technologies-used)
+    - [Programing Languages](#programing-languages)
+    - [Frameworks and Libraries:](#frameworks-and-libraries)
+    - [Fonts](#fonts)
+    - [Tools and Resources](#tools-and-resources)
+  - [Testing](#testing)
+  - [Version Control](#version-control)
+  - [Deployment](#deployment)
+    - [Requirements](#requirements)
+    - [To deploy this project, the following steps were taken:](#to-deploy-this-project-the-following-steps-were-taken)
+      - [Create Heroku new app:](#create-heroku-new-app)
+      - [Set up Database:](#set-up-database)
+      - [Upload static & media Files to AWS:](#upload-static--media-files-to-aws)
+      - [Finish deploying on Heroku:](#finish-deploying-on-heroku)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Code Snippets and Tutorials](#code-snippets-and-tutorials)
+    - [Acknowledgments](#acknowledgments)
+
+
 ## Project Overview
 
 - Below is a picture of site that shows it in responsive states. 
@@ -37,32 +81,32 @@ Andrej Cybovskij
 
 - The target audience of this website is quite wide. They are different age, status, families or single people.
 
-- Common types of users are:
+Common types of users are:
+- As a **New customers** I want to be able to ..
+    1. Get all necessary Gym related information such ass Classes, Timetables, Stuff, Equipment, Facilities and get some preview from inside
+    2. Use the site intuitively
+    3. To purchase exercise plans and merchandise
+    4. To register an account
+    5. To search for plans and merchandise products
+    6. View the details of individual products
+    7. To order plan or merchandise products by category
+    8. To order merchandise products by finer details such as A-Z, price low to high or vice versa
+    9. To add any product to my basket and checkout, without/with an account
+    10. To be informed throughout messages about my actions on the site.
 
-  - As a **New customers** I want to be able to ..
-      1. Get all necessary Gym related information such ass Classes, Timetables, Stuff, Equipment, Facilities and get some preview from inside
-      2. Use the site intuitively
-      3. To purchase exercise plans and merchandise
-      4. To register an account
-      5. To search for plans and merchandise products
-      6. View the details of individual products
-      7. To order plan or merchandise products by category
-      8. To order merchandise products by finer details such as A-Z, price low to high or vice versa
-      9. To add any product to my basket and checkout, without/with an account
-      10. To be informed throughout messages about my actions on the site.
+- As an **Existing customer** Additionally to a new customers, I want to be able to ..
+    1. Have a persona profile with all possible functionality
+    2. View my previous orders
+    2. Save/ update default delivery information
 
-  - As an **Existing customer** Additionally to a new customers, I want to be able to ..
-      1. Have a persona profile with all possible functionality
-      2. View my previous orders
-      3. Save/ update default delivery information
+- As an **Site Owner/ Admin** I want to be able to ..
+    1. Encourage people to use my website
+    2. Sell Exercise Plans, Nutrition Plans, Nutrition and exercise products
+    3. Add new plans and merchandise products
+    4. Edit plans and product details
+    5. Have a fully functional and easy to use payment system
+    6. Provide a contact form where users can send any questions and enquires
 
-  - As an **Site Owner/ Admin** I want to be able to ..
-      1. Encourage people to use my website
-      2. Sell Exercise Plans, Nutrition Plans, Nutrition and exercise products
-      3. Add new plans and merchandise products
-      4. Edit plans and product details
-      5. Have a fully functional and easy to use payment system
-      6. Provide a contact form where users can send any questions and enquires
 
 #### Developer Goals
 1.  Build a Django project backend by a relational database to create a website that allows users to store and manipulate data records.
@@ -91,86 +135,95 @@ Andrej Cybovskij
 
 - Registration and User Accounts
   - As a Site User, I want to be able to ..
-    1. Easity register to an account. Have a personal account and be able to view my profile
-    2. Easily to login or logout. Access my personal account information
-    3. Easily to recover my password in case I forgot it. Recover access to my account
-    4. Receive an email confirmation after registering. Verify that my acount registration was successful
-    5. Have a personalized user profile. View my personal order history and order confirmations and save my payment information
+    5. Easity register to an account. Have a personal account and be able to view my profile
+    6. Easily to login or logout. Access my personal account information
+    7. Easily to recover my password in case I forgot it. Recover access to my account
+    8. Receive an email confirmation after registering. Verify that my acount registration was successful
+    9. Have a personalized user profile. View my personal order history and order confirmations and save my payment information
 
 - Sorting and Searching 
   - As a Shoper, I want to be able to ..
-    1.  Sort the list of available products Easily identify the best priced and categorically sorted products
-    2.  Sort a specific category of product. Find the best priced product in a specific category or sort the product in that category by name
-    3.  Sort multiple categories of products simultaneously. Find the best priced across broad categories, such as food or merch
-    4.  Search for a product by name or description. Find a specific product I'd like topurchase
-    5.  Easily see what I've searched for and the number of results. Quickly decide whether the product I want is available
-    6.  Easily select the quantity of a product when purchasing it. Ensure I don’t accidentally select the wrong product
-    7.  View items in my bag to be purchased. Identify the total cost of my purchase and all items I will receive
-    8.  Adjust the quantity of individual items in my bag. Easily make changes to my purchase before checkout
-    9.  Easily enter my payment information. Check out quickly and with no hassles
-    10. Feel my personal and payment information is safe and secure. Confidently provide the needed information to make a purchase
-    11. View an order confirmation after checkout. Verify that I haven't made any mistakes
-    12. Receive an email confirmation after checking out. Keep the confirmation of what I've purchased for my records
+    10. Sort the list of available products Easily identify the best priced and categorically sorted products
+    11. Sort a specific category of product. Find the best priced product in a specific category or sort the product in that category by name
+    12. Sort multiple categories of products simultaneously. Find the best priced across broad categories, such as food or merch
+    13. Search for a product by name or description. Find a specific product I'd like topurchase
+    14. Easily see what I've searched for and the number of results. Quickly decide whether the product I want is available
+    15. Easily select the quantity of a product when purchasing it. Ensure I don’t accidentally select the wrong product
+    16. View items in my bag to be purchased. Identify the total cost of my purchase and all items I will receive
+    17. Adjust the quantity of individual items in my bag. Easily make changes to my purchase before checkout
+    18. Easily enter my payment information. Check out quickly and with no hassles
+    19. Feel my personal and payment information is safe and secure. Confidently provide the needed information to make a purchase
+    20. View an order confirmation after checkout. Verify that I haven't made any mistakes
+    21. Receive an email confirmation after checking out. Keep the confirmation of what I've purchased for my records
 
 - Admin and store manager
   - As a Store Owner, I want to be able to ..
-    1.  Add a product. Add new items to my store
-    2.  Edit / Update a product Change product price, description, images and other product criteria
-    3.  Delete Product. Remove items that are no longer for sale
+    22. Add a product. Add new items to my store
+    23. Edit / Update a product Change product price, description, images and other product criteria
+    24. Delete Product. Remove items that are no longer for sale
 
 ### Design Choices
-This project was created based on the target audience needs and requirements. The target audience is a quite wide range of people who likes to cook. Based on the website theme, were chosen Red, orange and green colors as a main brand colors. They are associated with food and takes attention to themselves. The food theme involves visual attraction to the user that mean website should contain a lot of food imaginary but not overload attention. However existing trends like to use clean and simple design. As a small piece of attraction, website’s buttons contains corresponding icons. According to user requirements, website should stay useful, usable and valuable for everybody. To achieve value from design were used user experience five planes:
+- This project was created based on the target audience needs and requirements. The target audience is a quite wide range of active people who likes sport and want to be in a good shape.
+Based on the website theme, were chosen Reddish (International Orange), orange (yellow orange) and three shades of green (Dark state, Midnight Green and Rich black) colors as a main brand colors. 
+According to [Color Meanings website] ( https://www.color-meanings.com/color-psychology-in-sports/) and Shirley J. Wenrich, author of the book All the Colors of Life: From the History and Mystery of Color, red is the best color for sports as it represents energy and vitality. It’s using as a small accent colors. It’s very handy in gym area. It subconsciously push and supports users to work with the heavy weights.
+Orange is inexorably linked to radiant energy. In sports, orange is a great color as it symbolizes strength and endurance. Orange is associated with warmth and the earth. Sports teams and the youth heartily accept this trendy color that combines strength and wisdom. Our orange color is closer to Yellow color. Yellow is the radiant and energetic color of sunshine and warmth. There is no individual who would not feel cheered and comforted when surrounded by vibrant yellow.
+For centuries, green is associated with wealth and health. It also stands for life and the environment. In sports, green represents the will to win and be cheerful. Our green is closer to Blue color. Blue is a calming color in sports. It represents a team or individual that is honest, calm, truthful, and sincere.
+All those characteristics are doing unusual but very good combination for the Gym and Fitness Club theme.
+Website design is quite dark, but it gives some uniqueness and exclusive club’s atmosphere. People like to get some exclusivity feeling. Gym area is quite individual sport and dark colors does not distract attention from the sport and allows user to concentrate on their tasks.
+Differently from the gym sections and information, shopping area’s background color is white and gives user possibility to simple use and read lot of information about shopping products.
+Website contains a lot of images, but parallax effect does not overload attention. According to the last trends, design stays clean and simple. 
+According to user requirements, website should stay useful, usable and valuable for everybody. To achieve value from design were used user experience five planes:
 
-- **Strategy Plane**  – aiming to achieve in the first place and for whom. The users of this website are people who likes to cook and share their ideas. The website should be quite simple and universal for everybody. Navigation is used quite standard and known by every online users. Traditional rule is no more than 3 clicks to search or get other information.
+
+- **Strategy Plane**  – aiming to achieve in the first place and for whom. The users of this website are people who likes sport and want to get all necessary information about Club and their services. The website should be quite simple and universal for everybody. Navigation is universal for desktop and mobile versions and is quite standard and known by every online user. Traditional rule is no more than 3 clicks to search or get other information was using during the planning and implementing this project.
 
 - **Scope plane** - represents features we want to include into design. 
   - This project includes following features: 
-      - Header/Mobile navigation.
+      - Header / Mobile navigation.
       - Registration system.
       - Login functionality.
-      - E Commerce functionality
-      - Payment system functionality
-      - Mail Notification/ Confirmation system
-      - Toast notification System
       - Create, Read, Update and Delete functionality.
       - Intuitive design.
       - SVG logo on top of the page.
-      - Grid/Card images as a visual representatives.
+      - Grid/Card images as a visual representative.
       - Search functionality.
       - Social media icons.
 
-- **Structure plane** - this project’s information is structured and logically placed into the main navigation. As well, this project’s content is taken from the MongoDB database. The structure of Database tables are presented in this [link to a database schema](DATABASE.md).
+- **Structure plane** - this project’s information is structured and logically placed into the navigation. As well, this project's content is taken from the database. The structure of Database tables is presented in the [database schemas](DATABASE.md).
 
 - **Skeleton plane** - part for mock-ups:
   - Wireframes links are presented below:
-    - [Link to a Wireframes for a Desctop view](assets/documents/project-4-desctop-wireframes.pdf)
-    - [Link to a Wireframes for Tablet view ](assets/documents/project-4-tablet-wireframes.pdf)
-    - [Link to a Wireframes for Mobile view ](assets/documents/project-4-mobile-wireframes.pdf)
+    - [Link to a Wireframes for a Desctop view](assets/documents/project-3-desctop-wireframes.pdf)
+    - [Link to a Wireframes for Tablet view ](assets/documents/project-3-tablet-wireframes.pdf)
+    - [Link to a Wireframes for Mobile view ](assets/documents/project-3-mobile-wireframes.pdf)
 
-- **Surface plane** - it is a final part of design procedure. The project is built in Classical design style with infusions of modern elements. This project is orientated more into the data manipulating. However, the website stays useful, usable and valuable for everybody.
+- **Surface plane** - it is a final part of design procedure. The project is built in modern design using parallax effect on many images. The project is orientated more into the data manipulating and working with shopping bag and payment system. However, the website stays modern design, useful, usable, and valuable for everybody.
 
 #### Colors
-The color palette were created according to people association with the food and professional information from the [Jenn David Design](https://jenndavid.com/colors-that-influence-food-sales-infographic/), food packaging Design Company that has over 20 years of successful experience partnering with specialty food brands.
+The color palette were created using information from resources about The Psychology Behind Colors in Sports: How They Matter.  [Color Meanings website]( https://www.color-meanings.com/color-psychology-in-sports/) by  Shirley J. Wenrich, author of the book All the Colors of Life: From the History and Mystery of Color.
 
-- The color brand one is Red color (CG Red). It is using for many titles and buttons to attract attention. According to Jenn David Design: Red and yellow are the chief food colors, evoking the taste buds and stimulating the appetite. Both red and yellow are also effective at grabbing attention.
-- The color brand two is Green color (Maximum Green). It is used for titles, subtitles, and buttons. According to Jenn David Design: Green color is connotes with eco-friendliness, healthy (think veggies).
-- The color brand three is Orange color. It is used for hover statements and for user navigation links, to attract attention. According to Jenn David Design: Orange color is a blend of red and yellow, naturally lends itself to food as another appetizing color.
-- The color brand four is Spanish Grey color. It is used as neutral base color and some lines color.
-- The color brand five is a Jet Grey color. It is dark color and used for main content font and all dark design elements to make them visible to user.
+- The color brand one is Reddish color (International Orange). It is using for H1 titles and button hovers to attract attention.
+- The color brand two is Orange color (Yellow Orange). It is used for H2 titles and different buttons. to attract attention. The color is working very well as a contrast color for the third brand color. Both red and yellow are also effective at grabbing attention.
+- The color brand three is Green color (Dark state, Midnight Green(a) and Rich black(b)). It is used for H3 titles and in many section / grids / cards as a background colors. In this project were used three shades of green color to do some gradient effect on the page.
+- The color brand four is Languid Levander color. It is used as neutral base color on some lines and backgrounds.
+- The color brand five is a Dark Jungle Green color. It is dark color and used for main content font on white backgrounds and all dark design elements to make them visible to user. This color is used for the footer background as a finishing page gradient color.
 
 - Color palete was created using [Coolors resources](https://coolors.co)
-- ![color scheme](assets/images/colors.PNG)
+- ![color scheme](assets/images/colors-new.png)
 
 
 #### Typography
-- Raleway sans-serif typeface family font, were using in this project for the body text. Body font size is 16px. This body font is easy to read and good for design. It is very universal and has very wide range of font weights.
-- All titles H1, H2 and H3 are in Dancing Scrip cursive font’s family.
-- All H4 titles are in Raleway sans-serif typeface font’s family.
-- According to Google Font, Dancing Script is a lively casual script where the letters bounce and change size slightly. Caps are big, and goes below the baseline. This font is associated with handwriting and is a good choice for recipe book titles. It is similar in style to everybody own hand written recipe book.
--  H1 as main title is in size of 52px. It is quite big size, but looks very stylish and attract attention. H2 title is in size of 42px. H3 titles are in size of 32px. H4 titles are in size of 26px.
+- Roboto sans-serif typeface family font was using in this project for the body text. Body font size is 16px. This body font is very common as neutral, easy to read and good for design. It is very universal and has very wide range of font weights.
+- All titles H1 and H2 are in Oswald sans-serif font’s family.
+- H3 titles are in Roboto Mono monospace font’s family.
+- All H4 – H6 titles are in Oswald sans-serif typeface font’s family.
+- According to Google Font, Oswald is a reworking of the classic style historically represented by the 'Alternate Gothic' sans serif typefaces. Font is narrow and looks very elegant for the fitness sections.
+- Roboto Mono is optimized for readability on screens across a wide variety of devices and reading environments. Added serifs makes this font standout from the Roboto font family and looks like barbell from the Gym. 
+-  H1 as main title is in size of 50px. It is quite big size but looks very stylish and attract attention. H2 title is in size of 40px. H3 titles are in size of 30px.
 - All fonts are reduced in size for mobile devices to fit into the small screen of devices:
-- H1 = 40px, H2 = 30px, H3 = 25px, H4 = 22px.
+- H1 = 40px, H2 = 35px, H3 = 27px.
 - body font is in same size for mobile devices.
+
 
 - Font examples are presented below:
 - H1 Oswald 50px ![H1 Title Oswald 50px](assets/images/h1.PNG)
@@ -187,8 +240,8 @@ The color palette were created according to people association with the food and
 - As well a lot of images were using for shopping pages.
 - Font Awesome icons were used to visually represent all major social media resources and as additional information on buttons. 
 - [Images and logo were taken from the Megapixl resources](https://www.megapixl.com)
-- [Shopping page images were taken from the Boutique Ado and Kaggle website](https://www.kaggle.com/datasets)
-- [nutrition images were taken from the HPnutrition website](https://www.hpnutrition.ie/)
+- [Shopping page images were taken from the Boutique Ado and Kaggle website] (https://www.kaggle.com/datasets)
+- [Nutrition images were taken from the HPnutrition website](https://www.hpnutrition.ie/)
 
 #### Design Elements
 List of all elements used on website: 
@@ -201,44 +254,46 @@ List of all elements used on website:
 - textarea inputs
 - images (.png, .jpg, .svg)
 - icons
-- contact form
+- forms
 
 
 #### Animations and Transitions
 
-Project has a limited range of animations. It draws attention to the element.
+Project has a limited range of animations. It draws attention to the elements.
 - Animation is added to the following elements:
   - **Hover** state is used for all icons, header navigation and buttons. On hover, they are changing background and text colors sliding from bottom to top.
-  - **Sliding from the bottom** animation is added to buttons, h1, h2 titles. As well this animation is added to forms.
+  - **Sliding from the bottom** animation is added to buttons, h1, h2 titles. As well this animation is added to all forms.
 
 ### Wireframes
 
 The wireframes were created using [Balsamiq](https://balsamiq.com/wireframes/) software. It was a part of Scope Plane of design process.
 - Wireframes links are presented below:
-- [Link to a Wireframes for a Desctop view](assets/documents/project-4-desctop-wireframes.pdf)
-- [Link to a Wireframes for Tablet view ](assets/documents/project-4-tablet-wireframes.pdf)
-- [Link to a Wireframes for Mobile view ](assets/documents/project-4-mobile-wireframes.pdf)
+- [Link to a Wireframes for a Desctop view](assets/documents/desctop.pdf)
+- [Link to a Wireframes for Tablet view ](assets/documents/tab.pdf)
+- [Link to a Wireframes for Mobile view ](assets/documents/mobile.pdf)
 
 ### Features
 
 Following features will be used in this project:
 
   - Intuitive design. Design is clear and understandable.
-  - Designed with HTML5, CSS, JavaScript and Materialize.
-  - Fixed Header navigation. Simple and easy to navigate.
-  - Mobile navigation (sliding from the left).
+  - Designed with HTML5, CSS, JavaScript and Bootstrap libraries.
+  - Universal Desctop/Mobile Hamburger menu navigation. Simple and easy to navigate.
   - Clickable Header logo.  
   - Search functionality.
   - Registration functionality.
   - Login functionality.
-  - Create,read, update and delete functionality for the user.
+  - Create,read, update and delete functionality for the admin user.
   - Database connection and data handling.
-  - Contact form with CTA, to be in touch with website's owner.
+  - Login / Register and other forms with CTA.
+  - Floating notifications for the user.
+  - Integrated payment system.
+  - Email notifications.
   - Social media icons are at the bottom of every page.
 
 ### Database Planning
 
-The database "The CUBE | GYM & Fitness Club" will contain 4 collections: Users, Recipes, Cuisine and Categories:
+The database "The CUBE | GYM & Fitness Club" will contain 4 collections: Categories, Products for the Products App and Role, Employee for the Employee App
 - [Link to a database schema](DATABASE.md)
 
 
@@ -249,12 +304,14 @@ All planned features are implemented and working properly
 #### Future Features
 
 Features to be implemented in the future:
-- Add cuisine locations on the map
-- Add recipe search on map functionality
-- Add recipe to user favourites
-- Preview and manage favourite’s collection
-- Add image upload functionality
+- Add contact form and newsletter sign up form
+- Add training classes and connect them to timetable
+- Make interactive timetable
+- Add training classes review possibility
+- Add product’s rating possibility
+- Add personalized flexible Club subscription
 - Integrate partners adds to website
+
 
 ## Technologies Used
 
@@ -264,21 +321,21 @@ The following languages, frameworks, libraries, and other tools were used to con
 - [HTML](https://www.w3schools.com/html/default.asp) The project uses **HTML** to define DOM elements.
 - [CSS](https://www.w3schools.com/w3css/default.asp) The project uses **CSS** to define DOM appearance.
 - [JavaScript](https://www.javascript.com) The project uses **JavaScript** to interact with content. 
-- [Python](https://www.python.org) The project uses **Python+Flask** to manipulate with content.
+- [Python](https://www.python.org) The project uses **Python** high-level general-purpose programming language.
 - [Markdown](https://www.markdownguide.org/) Documentation within the readme was generated using markdown.
 
 ### Frameworks and Libraries:
-- [Bootstrap](https://getbootstrap.com/) In the project were used **Bootstrap** framework for styling, layout and typography.
-- [Django](https://www.djangoproject.com/) In the project were used **Django** framework to build the web application.
-- [AWS](https://aws.amazon.com/) In the project were used **AWS** to store data objects.
-- [Stripe](https://stripe.com/ie) In the project were used **Stripe** financial services software for payment.
-- [Googlw Mail Service](https://www.google.ie/) In the project were used **Googlw Mail Service** for email notifications and confirmation.
+- [Bootstrap](https://getbootstrap.com/) In the project were used **Bootstrap** CSS framework for styling, layout and typography.
+- [Django](https://www.djangoproject.com) The project uses **Django** web framework that follows the model–template–views architectural pattern.
+- [MySQL](https://www.mongodb.com/) Database Service. In the project were used **MySQL** to store data objects.
 - [Heroku](https://heroku.com/) In the project were used **Heroku** cloud platform for deployment.
 - [GitHub](https://github.com) In the project were used **GitHub** hosting platform for version control.
+- [Stripe](https://stripe.com/ie) In the project were used **Stripe** Online payment processing for internet businesses.
+- [Amazon Web Services AWS](https://aws.amazon.com/s3/) In the project were used **Amazon Web Services AWS** as a storage service for static and media files.
+- [Gmail](https://mail.google.com) In the project were used **Gmail** email service for login registration and confirmation.
 
 ### Fonts
 Google Fonts:
-
 - [Oswald font can be found here](https://fonts.google.com/specimen/Oswald?query=oswa)
 - [Roboto Mono font can be found here](https://fonts.google.com/specimen/Roboto+Mono?query=robot)
 - [Roboto font can be found here](https://fonts.google.com/specimen/Roboto?query=robot)
@@ -305,24 +362,66 @@ Details of testing can be found in a separate document
  - Additional copy vere created localy
  - Constantly versions were updated and merged
 
-## Heroku Deployment
+## Deployment
 
-This project was developed using open source Heroku cloud Platform.
-To deploy this project, the following steps were taken:
-1.  Inside GitHub application create requirements.txt file to put all required files there (pip freeze > requirements.txt)
-2.  Inside GitHub application create Procfile to let Heroku know what file runs the application, (add there web: python app.py)
-3.  Create an account on Heroku and create a new app. Follow all proposed steps
-4.  Choose deployment method GitHub repository
-5.  Connect to GitHub section make sure your GitHub profile is displayed
-6.  Add repository name and click search
-7.  When it is found, click connect button
-8.  Go to the app settings on Heroku and click 'Reveal Config Vars'
-9.  Add the required keys as they are in your local env.py (i.e IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY )
-10. In the Deployment tab enable Automatic Deployment
-11. Deploy a GitHub branch choose your branch and press “Deploy Branch” button
-12. After done and displaying sign “Your app was successfully deployed” click view to launch a new app
-13. Deployed site is now available and should automatically update on any changes
+This project was developed using open source Heroku cloud Platform. All necessary documentation can be found on Heroku website:
+- [Deploying with Git](https://devcenter.heroku.com/articles/git#prerequisites-install-git-and-the-heroku-cli)
+- [Heroku GitHub Deploys](https://devcenter.heroku.com/articles/github-integration)
 
+### Requirements
+- project ready to deploy
+- Python3
+- GitHub account
+- Heroku account
+- Gitpod or an IDE of your choice
+- Stripe account
+- AWS Amazon account
+- Gmail account
+
+### To deploy this project, the following steps were taken:
+
+#### Create Heroku new app:
+    - Log in or sign up to Heroku and create a new app.
+    - Choose location and app name.
+    - In resources tab search for postgres library and add to your app.
+    - Go to the Settings tab and under Config Vars choose Reveal Config Vars, then enter the following config vars:
+      KEY VALUE
+      AWS_ACCESS_KEY_ID <aws access key>
+      AWS_SECRET_ACCESS_KEY <aws secret access key>
+      DATABASE_URL  <postgres database url>
+      EMAIL_HOST_PASS <email password(generated by Gmail)>
+      EMAIL_HOST_USER <email address>
+      SECRET_KEY  <your secret key>
+      STRIPE_PUBLIC_KEY <your stripe public key>
+      STRIPE_SECRET_KEY <your stripe secret key>
+      STRIPE_WH_SECRET  <your stripe wh key>
+      USE_AWS True
+
+#### Set up Database:
+
+    - Copy the DATABASE_URL (Postgres URL) from the config variables of Heroku and paste it into the default database in settings.py.
+    - DATABASES = { 'default': dj_database_url.parse("<DATABASE_URL>") }
+    - Migrate the models to create the database
+    - Load the data fixtures for all databases: (loading order is mater)
+    - python3 manage.py loaddata name of database (load all existing databases)
+    - Create a superuser
+    - Remove the DATABASE_URL from settings.py
+
+#### Upload static & media Files to AWS:
+    - Create AWS S3 Bucket.
+    - Set up a group
+    - Set a policy and user in the IAM environment.
+    - All details on AWS S3 parameters and a explanation you can find out more [here.](https://aws.amazon.com/s3/)
+    - upload static files to static folder
+    - upload media files to media folder
+
+#### Finish deploying on Heroku:
+
+    - Select deploy tab and under deployment method choose GitHub
+    - In connect to GitHub, search for a repository to connect - enter your GitHub repository name. When you see your repository, click connect.
+    - In Automatic deploys section, enable automatic deploy functionality.
+    - In Manual deploy section press Deploy Branch button to deploy your project.
+    - Enjoy
 
 ## Credits
 
@@ -330,29 +429,32 @@ To deploy this project, the following steps were taken:
 
 - [GO GYM Limerick](https://gogymlimerick.ie/) Go Gym Sport Club Limerick 
 - [HPnutrition](https://www.hpnutrition.ie/)  Ireland’s largest online sports supplements store
-- [Boutique Ado and Kaggle website] (https://www.kaggle.com/datasets)
+- [Boutique Ado and Kaggle website] (https://www.kaggle.com/datasets) images and shopping products
 
 ### Media
 
 - The images used in this project were obtained from the [Megapixl resources](https://www.megapixl.com)
 - Icons [Font Awesome](https://fontawesome.com/v4.7.0/)
-- SVG logo and favicon - base is taken from [Megapixl resources](https://www.megapixl.com) and modified on [Adobe Illustrator](https://www.adobe.com/products/illustrator.html)
+- SVG logo, menu icons and favicon - base is taken from [Megapixl resources](https://www.megapixl.com) and modified on [Adobe Illustrator](https://www.adobe.com/products/illustrator.html)
 - Image optimisation - self-made on [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
 
 ### Code Snippets and Tutorials
 
-- [Materialize & Static Files Setup](https://www.youtube.com/watch?v=7R0qJ7QJ2-U) were created using [Code Institute Tutorials](https://www.youtube.com/watch?v=7R0qJ7QJ2-U)
-- Code Institute Tutorials [User Authentication And Authorization 1](https://www.youtube.com/watch?v=r4qlVU20Aoc&t=357s)
-- Code Institute Tutorials [User Authentication And Authorization 2](https://www.youtube.com/watch?v=Sfkg3358Igc&t=228s)
-- Code Institute Tutorials [Login Functionality](https://www.youtube.com/watch?v=KzReYjMAgn8&t=14s)
-- Code Institute Tutorials [Display User Profile Page](https://www.youtube.com/watch?v=1rfV6CPcFX0)
-- Code Institute Tutorials [Logging Out](https://www.youtube.com/watch?v=7zEIYYHsTHA)
-- Code Institute Tutorials [Add Categories To MongoDB](https://www.youtube.com/watch?v=vvt8RZPDeDg)
-- Tutorial to round decimals [Stack overflow](https://stackoverflow.com/questions/11260155/how-to-use-float-filter-to-show-just-two-digits-after-decimal-point)
+- Code Institute Tutorials [User Authentication And Authorization 1](https://www.youtube.com/watch?v=pwmJLp2jots&t=413s)
+- Code Institute Tutorials [User Authentication And Authorization 2](https://www.youtube.com/watch?v=TmdKjjnGWyo)
+- Code Institute Tutorials [Profiles App](https://www.youtube.com/watch?v=9LKzhVoKZy4&t=373s)
+- Code Institute Tutorials [Users Profile Page](https://www.youtube.com/watch?v=NQxmvrqpSr0&t=396s)
+- Code Institute Tutorials [Products App Models and Fixtures](https://www.youtube.com/watch?v=bachwkoB2bk&t=10s)
+- Code Institute Tutorials [E commerce Toasts](https://www.youtube.com/watch?v=cwhROnUBZbQ)
+- Code Institute Tutorials [Checkout App/ Stripe](https://www.youtube.com/watch?v=or9zOswvISY&t=194s)
+- Code Institute Tutorials [Deployment / Heroku and AWS](https://www.youtube.com/watch?v=6mv-Qp37X4I)
+- Code Institute Tutorials [Sending Real Emails with Django](https://www.youtube.com/watch?v=uCtLfAd6w-c)
+- Code Institute Tutorials [Checkout App](https://www.youtube.com/watch?v=eAja_pKhiCM&t=387s)
+- Code Institute Tutorials [The Shopping Bag](https://www.youtube.com/watch?v=2G9j34jz42Q&t=366s)
+
 
 ### Acknowledgments
 
 I would like to thank:
 - My mentor [Malia Havlicek](https://code-institute-room.slack.com/team/UERRFE54G) for help in testing, review and invaluable advices.
-- Code Institute for Flask Mini-Project [tutorial](https://www.youtube.com/watch?v=y72Dq3GRxhc&t=14s)
-- Code Institute for Flask Mini-Project [tutorial 2](https://www.youtube.com/watch?v=Z4caY2YtQLY&t=9s)
+- Code Institute Chris Z for Boutique Ado project [tutorial](https://github.com/Code-Institute-Solutions/boutique_ado_v1). It was extremely useful and informative
