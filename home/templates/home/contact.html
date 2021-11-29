@@ -29,7 +29,7 @@
 		<div class="col section-col section-form">
 			<div class="col-lg-6 col-md-8 col-sm-12 section-form-group">
 				<h2 class="section-title">Contact Us</h2>
-				<form action="{% url 'contact' %}" method="POST">
+				<form role="form" action="" method="POST">
 					<!-- Contact Form -->
 					{% csrf_token %}
 						{{form.full_name|as_crispy_field}}

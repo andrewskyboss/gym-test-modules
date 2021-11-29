@@ -2,10 +2,12 @@
 thecube_gym_fitness_club Home app view file
 """
 from django.shortcuts import render, redirect
-from .forms import ContactUsForm
 from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import EmailMessage
 from django.http import HttpResponse
 from django.contrib import messages
+from django.template.loader import get_template
+from .forms import ContactUsForm
 
 
 # Create your views here.
@@ -37,16 +39,20 @@ def timetable(request):
 
 
 def contact(request):
-    form = ContactUsForm()
-    
+    # form = ContactUsForm()
+    form_class = ContactUsForm
+
     if request.method == "POST":
-    
+
+        form = form_class(data=request.POST)
+
         if form.is_valid():
             # subject = "Contact Us Gym Inquiry"
-            email_address = request.POST['email_address']
-            full_name = request.POST['full_name']
-            message_field = request.POST['message_field']
-            print("before send")
+
+            email_address = request.POST.get('email_address', '')
+            full_name = request.POST.get('full_name', '')
+            message_field = request.POST.get('message_field', '')
+            print("---------------------before send")
 
             # body = {
             #     'full_name': form.cleaned_data['full_name'],
@@ -58,23 +64,45 @@ def contact(request):
             try:
                 # send_mail(subject, message, 'admin@example.com',
                 #           ['admin@example.com'])
-                send_mail(
-                    'message from ' + full_name,
-                    message_field,  # message
-                    email_address,  # from email
-                    ['thecubegym@gmail.com'],    
+                # send_mail(
+                #     'message from ' + full_name,
+                #     message_field,
+                #     email_address,
+                #     ['thecubegym@gmail.com'],
+                # )
+
+                template = get_template('contact_template.txt')
+                context = {
+                    'email_address': email_address,
+                    'full_name': full_name,
+                    'message_field': message_field,
+                }
+                content = template.render(context)
+                recipients = ['contact@thecubegym.com']
+
+                message = EmailMessage(
+                    "New contact form submission",
+                    content,
+                    "Your website" + '',
+                    ['contact@thecubegym.com'],
+                    headers={'Reply-To': email_address}
                 )
-                messages.success(request, f'Hey {full_name} Successfully received')
-                print(send_mail(subject, message, from_email, recipient_list))
-                
+                # email.send()
+                send_mail(full_name, message, email_address, recipients)
+                messages.success(
+                    request, f'Hey {full_name} Successfully received')
+
+                print("----------------------- sent process")
+                return redirect('home')
+
             except BadHeaderError:
                 # messages.success(request, 'Successfully wrong.')
                 return HttpResponse('Invalid header found.')
             return redirect("home/contact.html")
-        
+
         print("wrong")
     else:
-        return render(request, 'home/contact.html', {'form': form})
+        return render(request, 'home/contact.html', {'form': form_class})
         print("wrong 1")
 
-    return render(request, "home/contact.html", {'form': form})
+    return render(request, "home/contact.html", {'form': form_class})
