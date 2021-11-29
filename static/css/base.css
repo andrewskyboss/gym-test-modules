@@ -496,16 +496,22 @@ section.section-four>div>div>div>form>span.custom-style {
 	color: var(--color-white);
 	box-shadow: inset 0 -66px 0 0 var(--color-brand-1);
 }
-
+section div>div>div.section-form-group form.contact-us div> div> textarea.form-control,
 form.edit_product .form-group>div>textarea.form-control,
 form.add_product .form-group textarea.form-control {
 	background-color: var(--color-brand-3-a);
-}
+	border: none;
+	color: var(--color-white);
+	border-radius: 0;
+	border-bottom: 1px solid var(--color-brand-2);
 
+}
+section div>div>div.section-form-group form.contact-us div> div> input.form-control,
 form.edit_product .form-group .form-control,
 form.add_product .form-group .form-control {
 	background-color: transparent;
 	border: none;
+	border-radius: 0;
 	color: var(--color-white);
 	border-bottom: 1px solid var(--color-brand-2);
 }

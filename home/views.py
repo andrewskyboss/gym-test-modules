@@ -83,12 +83,12 @@ def contact(request):
                 message = EmailMessage(
                     "New contact form submission",
                     content,
-                    "Your website" + '',
-                    ['contact@thecubegym.com'],
+                    "Your website", ['contact@thecubegym.com'],
                     headers={'Reply-To': email_address}
                 )
                 # email.send()
-                send_mail(full_name, message, email_address, recipients)
+                send_mail(full_name, str(message), email_address, recipients)
+                form.save()
                 messages.success(
                     request, f'Hey {full_name} Successfully received')
 
@@ -96,11 +96,11 @@ def contact(request):
                 return redirect('home')
 
             except BadHeaderError:
-                # messages.success(request, 'Successfully wrong.')
-                return HttpResponse('Invalid header found.')
-            return redirect("home/contact.html")
+                messages.success(request, 'Successfully wrong.')
+                # return HttpResponse('Invalid header found.')
+                return redirect("home/contact.html")
 
-        print("wrong")
+            print("wrong")
     else:
         return render(request, 'home/contact.html', {'form': form_class})
         print("wrong 1")
